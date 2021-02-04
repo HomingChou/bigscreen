@@ -1,6 +1,12 @@
 # bigscrren
 
-> 大屏
+> pc端大屏实现，自动适配各种屏幕
+> 建议将屏幕比例调整至8/3体验最佳观看效果
+
+#技术栈
+
+> Vue/Webpack/Echarts/Rem/css3
+
 
 ## Build Setup
 
