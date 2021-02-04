@@ -2,6 +2,9 @@
 
 > pc端大屏实现，自动适配各种屏幕。建议将屏幕比例调整至8/3体验最佳观看效果。
 
+## demo
+  [demo地址](https://homingchou.github.io/bigscreen)
+
 ## 技术栈
 
 > Vue/Webpack/Echarts/Rem/css3
