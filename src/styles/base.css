@@ -1,0 +1,622 @@
+@charset "utf-8";
+/*
+ * @name：base.css
+ * @autor: HomingChou
+ * @功能：1、重设浏览器默认样式 CSS reset
+ *       2、设置通用原子类
+ */
+ 
+* {box-sizing: border-box;}
+html{color:#303133;font-sise:12px;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;font-sise:12px;}
+th {text-align:inherit;}
+fieldset,img {border:none;}
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {display:block;}
+ul,ol,li{list-style:none;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:500;}
+/* 让链接在 hover 状态下显示下划线 */
+a:hover {text-decoration:underline;}
+/* 默认不显示下划线，保持页面简洁 */
+ins,a，del {text-decoration:none;}
+/* 去除 ie6 & ie7 焦点点状线 */
+a:focus,*:focus {outline:none;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}
+caption,th{text-align:left;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+
+/* 公共样式 */
+.pointer, a:hover {cursor: pointer;}
+.radius-circle{border-radius: 50%;}
+.radius-4{border-radius: 4px;}
+.radius-6{border-radius: 6px;}
+.display-n{display:none;}
+.display-b{display:block;}
+.display-i{display:inline;}
+.display-ib{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;  /*去掉下边距*/}
+/* 超过省略号显示 */
+.over-ellipsis {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.over-hidden {overflow: hidden}
+/*pre*/
+.pre-warp-text {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+/* vue */
+[v-cloak] {display: none;}
+
+/* 字体颜色配置 */
+.color-base{color: #4873D3;}
+.color-primary{color: #4873D3;}
+.color-success{color: #14C49E;}
+.color-danger{color: #EA3367;}
+.color-warning{color: #F4B236;}
+.color-info{color: #49afcd;}
+.color-white{color: #fff;}
+.color-black{color: #000;}
+
+.color-gray3{color: #303133;}
+.color-gray6{color: #606266;}
+.color-gray9{color: #909399;}
+.color-grayc{color: #C0C4CC;}
+
+/* 背景颜色配置 */
+.bg-base{background-color: #4873D3;}
+.bg-success{background-color: #14C49E;}
+.bg-danger{background-color: #EA3367;}
+.bg-warning{background-color: #F4B236;}
+.bg-gray{background-color: #909399;}
+.bg-white{background-color: #fff;}
+.bg-black{background-color: #000;}
+
+/* 边框配置 */
+.border-base{border: 1px solid #E5EAEC;}
+.border-base-top{border-top: 1px solid #E5EAEC;}
+.border-base-bottom{border-bottom: 1px solid #E5EAEC;}
+.border-base-left{border-left: 1px solid #E5EAEC;}
+.border-base-right{border-right: 1px solid #E5EAEC;}
+
+.border-none{border: none;}
+.border-transparent{border: 1px solid transparent;}
+
+/*文字排版*/
+.f12{font-size: 12px;}
+.f13{font-size: 13px;}
+.f14{font-size: 14px;}
+.f16{font-size: 16px;}
+.f18{font-size: 16px;}
+.f20{font-size: 20px;}
+.f24{font-size: 24px;}
+.f28{font-size: 28px;}
+.f28{font-size: 28px;}
+.f30{font-size: 30px;}
+.fb{font-weight: bold}
+.fn{font-weight: normal;}
+.t2{text-indent: 2em;}
+
+/*定位*/
+.text-left{text-align:left;}
+.text-center{text-align:center;}
+.text-right{text-align:right;}
+.block-center{margin-left:0;margin-right:0;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.vm{verticle-align:middle;}
+.position-r{position:relative;}
+.position-a{position:absolute;}
+.right{right:0;}
+.left{left:0;}
+.top{top:0;}
+.bottom{bottom:0;}
+
+
+/*长度高度*/
+.w10{width:10px;}
+.w20{width:20px;}
+.w30{width:30px;}
+.w40{width:40px;}
+.w50{width:50px;}
+.w60{width:60px;}
+.w70{width:70px;}
+.w80{width:80px;}
+.w90{width:90px;}
+.w100{width:100px;}
+.w200{width:200px;}
+.w300{width:300px;}
+.w400{width:400px;}
+.w500{width:500px;}
+.w600{width:600px;}
+.w700{width:700px;}
+.w800{width:800px;}
+.h50{height:50px;}
+.h80{height:80px;}
+.h100{height:100px;}
+.h200{height:200px;}
+.w{width:100%}
+.h{height:100%}
+
+/*边距*/
+.m5{margin:5px;}
+.m10{margin:10px;}
+.m15{margin:15px;}
+.m20{margin:20px;}
+.m30{margin:30px;}
+
+.mtb5{margin:5px 0;}
+.mtb10{margin:10px 0;}
+.mtb15{margin:15px 0;}
+.mtb20{margin:20px 0;}
+.mtb30{margin:30px 0;}
+
+.mlr5{margin:0 5px;}
+.mlr10{margin:0 10px;}
+.mlr15{margin:0 15px;}
+.mlr20{margin:0 20px;}
+.mlr30{margin:0 30px;}
+
+.mt5{margin-top:5px;}
+.mt10{margin-top:10px;}
+.mt15{margin-top:15px;}
+.mt20{margin-top:20px;}
+.mt30{margin-top:30px;}
+.mt50{margin-top:50px;}
+.mt100{margin-top:100px;}
+
+.mb5{margin-bottom:5px;}
+.mb10{margin-bottom:10px;}
+.mb15{margin-bottom:15px;}
+.mb20{margin-bottom:20px;}
+.mb30{margin-bottom:30px;}
+.mb50{margin-bottom:50px;}
+.mb100{margin-bottom:100px;}
+
+.ml5{margin-left:5px;}
+.ml10{margin-left:10px;}
+.ml15{margin-left:15px;}
+.ml20{margin-left:20px;}
+.ml30{margin-left:30px;}
+.ml50{margin-left:50px;}
+.ml100{margin-left:100px;}
+
+.mr5{margin-right:5px;}
+.mr10{margin-right:10px;}
+.mr15{margin-right:15px;}
+.mr20{margin-right:20px;}
+.mr30{margin-right:30px;}
+.mr50{margin-right:50px;}
+.mr100{margin-right:100px;}
+
+.p5{padding:5px;}
+.p10{padding:10px;}
+.p15{padding:15px;}
+.p20{padding:20px;}
+.p30{padding:30px;}
+
+.ptb5{padding:5px 0;}
+.ptb10{padding:10px 0;}
+.ptb15{padding:15px 0;}
+.ptb20{padding:20px 0;}
+.ptb30{padding:30px 0;}
+
+.plr5{padding:0 5px;}
+.plr10{padding:0 10px;}
+.plr15{padding:0 15px;}
+.plr20{padding:0 20px;}
+.plr30{padding:0 30px;}
+
+.pt5{padding-top:5px;}
+.pt10{padding-top:10px;}
+.pt15{padding-top:15px;}
+.pt20{padding-top:20px;}
+.pt30{padding-top:30px;}
+.pt50{padding-top:50px;}
+.pt100{padding-top:100px;}
+
+.pb5{padding-bottom:5px;}
+.pb10{padding-bottom:10px;}
+.pb15{padding-bottom:15px;}
+.pb20{padding-bottom:20px;}
+.pb30{padding-bottom:30px;}
+.pb50{padding-bottom:50px;}
+.pb100{padding-bottom:100px;}
+
+.pl5{padding-left:5px;}
+.pl10{padding-left:10px;}
+.pl15{padding-left:15px;}
+.pl20{padding-left:20px;}
+.pl30{padding-left:30px;}
+.pl50{padding-left:50px;}
+.pl100{padding-left:100px;}
+
+.pr5{padding-right:5px;}
+.pr10{padding-right:10px;}
+.pr15{padding-right:15px;}
+.pr20{padding-right:20px;}
+.pr30{padding-right:30px;}
+.pr50{padding-right:50px;}
+.pr100{padding-right:100px;}
+
+
+/********************* flex布局 *****************************/
+/* ============================================================
+   flex , flex-h：定义布局为盒模型
+   flex-v：盒模型垂直布局,主轴为垂直方向，起点在上沿
+   flex-wrap：子元素超出换行，第一行在上方。
+
+   flex-jc-center：居中对齐（主轴为从左到右）。
+   flex-jc-start：左对齐（主轴为从左到右）。
+   flex-jc-end：右对齐（主轴为从左到右）。
+   flex-jc-between：两端对齐，项目之间的间隔都相等（主轴为从左到右）。
+   flex-jc-arround：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍（主轴为从左到右）。
+   
+   flex-ai-center：交叉轴的中点对齐。
+
+   flex-grow-1：子元素占据剩余的空间
+
+   兼容性：ios 4+、android 2.3+、winphone8+
+   ============================================================ */
+
+/********************* 横向 *****************************/
+
+/* 父元素-横向排列（主轴） */
+.flex-h, .flex {
+  display: box;              /* OLD - Android 4.4- */
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  /* 09版 */
+  -webkit-box-orient: horizontal;
+  /* 12版 */
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+
+/* 父元素-纵向排列（主轴） */
+.flex-v {
+  display: box;              /* OLD - Android 4.4- */
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  /* 09版 */
+  -webkit-box-orient: vertical;
+  /* 12版 */
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+
+/********************* warp *****************************/
+
+/* 父元素-横向换行 默认不换行*/
+.flex-wrap {
+  /* 09版 */
+  /*-webkit-box-lines: multiple;*/
+  /* 12版 */
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/********************* justify-content *****************************/
+
+/* 父元素-水平居中 */
+.flex-jc-center {
+  /* 09版 */
+  -webkit-box-pack: center;
+  /* 12版 */
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  /* 其它取值如下：
+    align-items     主轴原点方向对齐
+    flex-end        主轴延伸方向对齐
+    space-between   等间距排列，首尾不留白
+    space-around    等间距排列，首尾留白
+   */
+}
+
+/* 父元素-等间距排列，首尾不留白 */
+.flex-jc-between {
+  /* 09版 */
+  -webkit-box-pack: space-between;
+  /* 12版 */
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  /* 其它取值如下：
+    align-items     主轴原点方向对齐
+    flex-end        主轴延伸方向对齐
+    space-between   等间距排列，首尾不留白
+    space-around    等间距排列，首尾留白
+   */
+}
+
+/* 父元素-等间距排列，首尾留白 */
+.flex-jc-around {
+  /* 09版 */
+  -webkit-box-pack: space-around;
+  /* 12版 */
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  /* 其它取值如下：
+    align-items     主轴原点方向对齐
+    flex-end        主轴延伸方向对齐
+    space-between   等间距排列，首尾不留白
+    space-around    等间距排列，首尾留白
+   */
+}
+
+/* 父元素- 右对齐 */
+.flex-jc-end {
+  /* 09版 */
+  -webkit-box-pack: flex-end;
+  /* 12版 */
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+  /* 其它取值如下：
+    align-items     主轴原点方向对齐
+    flex-end        主轴延伸方向对齐
+    space-between   等间距排列，首尾不留白
+    space-around    等间距排列，首尾留白
+   */
+}
+
+/********************* align-items *****************************/
+
+/* 父元素-垂直居中 */
+.flex-ai-center {
+  /* 09版 */
+  -webkit-box-align: center;
+  /* 12版 */
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  /* 其它取值如下：
+    flex-start    交叉轴的起点对齐
+    flex-end      交叉轴的终点对齐
+    center        交叉轴的中点对齐
+    baseline      项目的第一行文字的基线对齐
+    stretch    （默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
+   */
+}
+
+
+/* 子元素占据剩余的空间 */
+.flex-grow-1 {
+  -prefix-box-flex: 1; /* old spec webkit, moz */
+  -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -webkit-flex: 1;          /* Chrome */
+  -moz-box-flex: 1;         /* Firefox 19- */
+  -ms-flex: 1;              /* IE 10 */
+  flex: 1;                  /* NEW,  Opera 12.1, Firefox 20+ */
+}
+
+/* 子元素占据剩余的空间 */
+.flex-auto {
+  -prefix-box-flex: auto; /* old spec webkit, moz */
+  -webkit-box-flex: auto;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -webkit-flex: auto;          /* Chrome */
+  -moz-box-flex: auto;         /* Firefox 19- */
+  -ms-flex: auto;              /* IE 10 */
+  flex: auto;                  /* NEW,  Opera 12.1, Firefox 20+ */
+}
+
+/* 子元素占据剩余的空间 */
+.flex-none {
+  -prefix-box-flex: none; /* old spec webkit, moz */
+  -webkit-box-flex: none;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -webkit-flex: none;          /* Chrome */
+  -moz-box-flex: none;         /* Firefox 19- */
+  -ms-flex: none;              /* IE 10 */
+  flex: none;                  /* NEW,  Opera 12.1, Firefox 20+ */
+}
+
+
+/* 父元素-横向排列（主轴） */
+.flex-center {
+  display: box;              /* OLD - Android 4.4- */
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  /* 09版 */
+  -webkit-box-orient: horizontal;
+  /* 12版 */
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+
+  /* 09版 */
+  -webkit-box-align: center;
+  /* 12版 */
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  /* 其它取值如下：
+    flex-start    交叉轴的起点对齐
+    flex-end      交叉轴的终点对齐
+    center        交叉轴的中点对齐
+    baseline      项目的第一行文字的基线对齐
+    stretch    （默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
+   */
+}
+/* 父元素-横向排列（主轴） */
+.flex-center-between {
+  display: box;              /* OLD - Android 4.4- */
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  /* 09版 */
+  -webkit-box-orient: horizontal;
+  /* 12版 */
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+
+  /* 09版 */
+  -webkit-box-align: center;
+  /* 12版 */
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  /* 其它取值如下：
+    flex-start    交叉轴的起点对齐
+    flex-end      交叉轴的终点对齐
+    center        交叉轴的中点对齐
+    baseline      项目的第一行文字的基线对齐
+    stretch    （默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
+   */
+
+  /* 09版 */
+  -webkit-box-pack: space-between;
+  /* 12版 */
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  /* 其它取值如下：
+    align-items     主轴原点方向对齐
+    flex-end        主轴延伸方向对齐
+    space-between   等间距排列，首尾不留白
+    space-around    等间距排列，首尾留白
+   */
+}
+/* 父元素-横向排列（主轴） */
+.flex-center-center {
+  display: box;              /* OLD - Android 4.4- */
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  /* 09版 */
+  -webkit-box-orient: horizontal;
+  /* 12版 */
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+
+  /* 09版 */
+  -webkit-box-align: center;
+  /* 12版 */
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  /* 其它取值如下：
+    flex-start    交叉轴的起点对齐
+    flex-end      交叉轴的终点对齐
+    center        交叉轴的中点对齐
+    baseline      项目的第一行文字的基线对齐
+    stretch    （默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
+   */
+
+  /* 09版 */
+  -webkit-box-pack: center;
+  /* 12版 */
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  /* 其它取值如下：
+    align-items     主轴原点方向对齐
+    flex-end        主轴延伸方向对齐
+    space-between   等间距排列，首尾不留白
+    space-around    等间距排列，首尾留白
+   */
+}
+/* 父元素-横向排列（主轴） */
+.flex-v-center-center {
+  display: box;              /* OLD - Android 4.4- */
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  /* 09版 */
+  -webkit-box-orient: vertical;
+  /* 12版 */
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+
+  /* 09版 */
+  -webkit-box-align: center;
+  /* 12版 */
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  /* 其它取值如下：
+    flex-start    交叉轴的起点对齐
+    flex-end      交叉轴的终点对齐
+    center        交叉轴的中点对齐
+    baseline      项目的第一行文字的基线对齐
+    stretch    （默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
+   */
+
+  /* 09版 */
+  -webkit-box-pack: center;
+  /* 12版 */
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  /* 其它取值如下：
+    align-items     主轴原点方向对齐
+    flex-end        主轴延伸方向对齐
+    space-between   等间距排列，首尾不留白
+    space-around    等间距排列，首尾留白
+   */
+}

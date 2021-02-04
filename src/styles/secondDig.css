@@ -1,0 +1,238 @@
+/*二级-风险挖掘*/
+.second-dig .content{
+    padding-top: 2rem;
+}
+.second-dig .xpanel >.title {
+    height: 6%;
+}
+.xpanel-wrapper-dig {
+    padding: 0;
+}
+.xpanel-wrapper-dig .col {
+    margin:.62rem .36rem;
+}
+.xpanel-wrapper-dig .xpanel-box {
+    padding: 3% 1.6rem .62rem;
+}
+.xpanel-wrapper-dig .xpanel-box >.row {
+    padding-top: .62rem;
+}
+.dig-triggle.second-dig-triggle {
+    top: 44%;
+    width: 6%;
+    height: 6%;
+}
+.dig-triggle.second-dig-triggle.left {
+    left: 4%;
+}
+.dig-triggle.second-dig-triggle.right {
+    right: 4%;
+}
+
+/*风险挖掘 环形图*/
+.xpanel-wrapper-dig .xpanel-box.xpanel-box-second-ring {
+    /*padding: 1.2rem 1.42rem 0;*/
+    padding: 1.2rem 0;
+}
+.xpanel-wrapper-dig .xpanel-box.xpanel-box-second-ring .top-box {
+    padding: 0 1.10rem;
+}
+.second-dig-ring-box {
+    width: 100%;
+    height: 100%;
+    font-size: .71rem;
+    color: #fff;
+}
+.second-dig-ring-box .ring-text{
+    white-space: nowrap;
+    line-height: 1.25rem;
+}
+.second-dig-ring-box .ring-text:hover {
+    cursor: pointer;
+}
+.second-dig-ring-box .ring-number {
+    font-size: 1.25rem;
+    color: #F6D016;
+}
+.second-dig-ring-box .bottom {
+    margin-top: .53rem;
+}
+.second-dig-ring-box .ring-icon{
+    margin: 0 .32rem;
+    width: 1rem;
+    height: 1rem;
+    background: url("../img/up.png") no-repeat center center;
+    background-size: contain;
+}
+.second-dig-ring-box .ring-icon.down {
+    background-image: url("../img/down.png");
+}
+
+/*风险挖掘 右侧公共部分*/
+.xpanel-second-right-dig .xpanel >.title {
+    font-size: .85rem;
+    padding: 0 .5rem;
+    top: .3rem;
+    color: #fff;
+    z-index: 10;
+}
+/*右下角切换标题*/
+.xpanel-second-right-dig .xpanel .reward-toggle-title {
+    width: 75%;
+    padding: 0;
+    font-size: .75rem;
+}
+.xpanel-second-right-dig .xpanel .reward-toggle-title .title-text {
+    text-align: center;
+}
+.xpanel-second-right-dig .xpanel .reward-toggle-title >i {
+    font-size: 1.5rem;
+    color: #0075E6;
+}
+.xpanel-second-right-dig .xpanel .reward-toggle-title >i:hover {
+    cursor: pointer;
+    opacity: .9;
+}
+
+/*配置界面*/
+.second-dig .dig-config-content {
+    padding-top: .45rem;
+}
+.dig-confgi-add-btn {
+    position: absolute;
+    right: 1rem;
+    top: -2px;
+    z-index: 10;
+    padding: 5px 15px;
+}
+.dig-confgi-add-btn.min {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    padding: 2px 5px;
+}
+/*左侧专题列表*/
+.dig-config-list {
+    padding: 0 10px;
+    font-size: 12px;
+    height: 100%;
+    overflow: auto;
+}
+.dig-config-list >li {
+    margin: 10px 0;
+    padding: 10px 10px;
+    background-color: #1B3462;
+    border: 1px solid #0075E6;
+}
+.dig-config-list >li.active {
+    background-color: #F59A23;
+    border-color: #F59A23;
+}
+.dig-config-list >li .btn-box .config-btn {
+    margin: 0 2px;
+}
+.config-btn {
+    border: 1px solid #fff;
+    padding: 2px;
+    font-size: 12px;
+}
+.config-btn.big {
+    padding: 5px;
+    font-size: 14px;
+}
+.config-btn:hover {
+    cursor: pointer;
+    background-color: #0075E6;
+}
+/*右侧专题明细配置*/
+.content.is-show-page .xpanel-config-box >.xpanel-box-mark {
+    display: none;
+}
+.content.is-show-page .dig-confgi-add-btn {
+    display: none;
+}
+.xpanel-config-box:hover >.xpanel-box-mark{
+    display: block;
+}
+.xpanel-box-mark {
+    display: none;
+    position: absolute;
+    top: 0;bottom: 0; left: 0;right: 0;
+    background-color: rgba(0, 0, 0, .6);
+}
+.xpanel-box-mark-btns >.el-col {
+    margin: 10px 0;
+}
+/*模版配置弹窗*/
+.dig-config-dialog .el-dialog__body{
+    padding: 20px;
+}
+.dig-config-tlp-list >li {
+    margin-right: 20px;
+    position: relative;
+    height: 180px;
+}
+.dig-config-tlp-list >li >img {
+    height: 100%;
+}
+.dig-config-tlp-list >li:hover {
+    cursor: pointer;
+}
+.dig-config-tlp-list >li.active .dig-tpl-mark {
+    display: block;
+}
+.dig-tpl-mark {
+    display: none;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-color: rgba(0, 0, 0, .4);
+}
+.dig-tpl-mark >i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    background-color: #FF3B30;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+/*三级配置*/
+.thirld-config-box-card {
+    margin-bottom: 20px;
+}
+.thirld-config-box-card .el-card__header {
+    padding: 10px 20px;
+}
+.thirld-config-box-card .el-table td,
+.thirld-config-box-card .el-table th {
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+.second-title-popover {
+    padding: .8rem;
+    background-color: #1B3462;
+    color: #fff;
+    border: 1px solid #1B3462;
+    font-size: .75rem;
+}
+.second-title-popover .el-popover__title {
+    margin-bottom: .5rem;
+    font-size: .75rem;
+    color: #fff;
+}
+.second-title-popover.el-popper[x-placement^=bottom] .popper__arrow::after {
+    border-bottom-color: #1B3462;
+}
+.second-title-popover.el-popper[x-placement^=bottom] .popper__arrow {
+    border-bottom-color: #1B3462;
+}
+.second-title-popover .el-textarea__inner {
+    background-color: transparent;
+    border: 1px solid #fff;
+    font-size: .75rem;
+    color: #fff;
+}
